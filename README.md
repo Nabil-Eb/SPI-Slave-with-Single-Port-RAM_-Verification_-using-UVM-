@@ -22,7 +22,7 @@ communication between the UVM class-based environment and the DUT’s signal-lev
 <h2>Wrapper Environment (Active Agent)</h2>
 <p>The Wrapper_env is the main verification environment and serves as the active component of the 
 testbench.</p>
-It comprises the following elements: 
+<p>It comprises the following elements:</p>
 <ul><li>Wrapper_agent (Active) – Generates and drives stimulus to the DUT.</li>
 <li>Wrapper_driver – Converts high-level sequence items into signal-level transactions via the 
 Wrapper_interface.</li>
