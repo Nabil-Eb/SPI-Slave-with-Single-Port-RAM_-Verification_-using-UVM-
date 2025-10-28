@@ -1,7 +1,7 @@
 # SPI-Slave-with-Single-Port-RAM_-Verification_-using-UVM-
 <img width="1152" height="896" alt="UVM Structure" src="https://github.com/user-attachments/assets/2576bd8d-ea7a-40e9-abee-1f9f82a2aba4" />
 
-**Detailed Description of UVM Testbench Operation**
+<h2>Detailed Description of UVM Testbench Operation</h2>
 The verification environment for the Wrapper system is developed using the Universal Verification 
 Methodology (UVM) to ensure modularity, reusability, and coverage-driven verification. 
 The complete UVM testbench architecture is illustrated in the Wrapper_top block diagram and consists of 
@@ -9,7 +9,7 @@ three primary environments:
 Wrapper_env, spi_env, and RAM_env, each dedicated to monitoring and verifying a specific part of the 
 Design Under Test (DUT). 
 
-**1. Overview** 
+<h2>1. Overview</h2> 
 At the top level, the testbench (Wrapper_test) instantiates the three environments and coordinates the 
 overall stimulus generation through the Wrapper_sequence. 
 The DUT (Wrapper) communicates with two submodules, SLAVE and RAM, via their respective 
