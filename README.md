@@ -2,38 +2,38 @@
 <img width="1152" height="896" alt="UVM Structure" src="https://github.com/user-attachments/assets/2576bd8d-ea7a-40e9-abee-1f9f82a2aba4" />
 
 <h2>Detailed Description of UVM Testbench Operation</h2>
-The verification environment for the Wrapper system is developed using the Universal Verification 
-Methodology (UVM) to ensure modularity, reusability, and coverage-driven verification. 
-The complete UVM testbench architecture is illustrated in the Wrapper_top block diagram and consists of 
-three primary environments: 
+<p>The verification environment for the Wrapper system is developed using the Universal Verification 
+Methodology (UVM) to ensure modularity, reusability, and coverage-driven verification.</p>
+<p>The complete UVM testbench architecture is illustrated in the Wrapper_top block diagram and consists of 
+three primary environments:</p>
 Wrapper_env, spi_env, and RAM_env, each dedicated to monitoring and verifying a specific part of the 
 Design Under Test (DUT). 
 
 <h2>Overview</h2> 
-At the top level, the testbench (Wrapper_test) instantiates the three environments and coordinates the 
+<p>At the top level, the testbench (Wrapper_test) instantiates the three environments and coordinates the 
 overall stimulus generation through the Wrapper_sequence. 
 The DUT (Wrapper) communicates with two submodules, SLAVE and RAM, via their respective 
-interfaces. 
-For functional verification, corresponding Golden Models (Golden_wrapper, Golden_SLAVE, and 
-Golden_RAM) are instantiated to serve as reference models for result comparison. 
+interfaces.</p>
+<p>For functional verification, corresponding Golden Models (Golden_wrapper, Golden_SLAVE, and 
+Golden_RAM) are instantiated to serve as reference models for result comparison.</p>
 All UVM components are interconnected using virtual interfaces, enabling seamless transaction-level 
 communication between the UVM class-based environment and the DUT’s signal-level interfaces. 
 
 <h2>Wrapper Environment (Active Agent)</h2>
-The Wrapper_env is the main verification environment and serves as the active component of the 
-testbench. 
-It comprises the following elements: 
-• Wrapper_agent (Active) – Generates and drives stimulus to the DUT. 
-• Wrapper_driver – Converts high-level sequence items into signal-level transactions via the 
-Wrapper_interface. 
-• Wrapper_monitor – Observes DUT responses, reconstructs transactions, and forwards them to 
-analysis components. 
-• Wrapper_scoreboard – Compares DUT outputs with the Golden_wrapper reference model. 
-• Wrapper_coverage – Collects functional coverage to evaluate verification progress. 
-The Wrapper_agent operates in active mode, meaning it both drives stimulus (through the driver) and 
-monitors responses. 
-The Wrapper_sequencer coordinates between the test sequences and the driver, ensuring proper flow of 
-transaction data. 
+<p>The Wrapper_env is the main verification environment and serves as the active component of the 
+testbench.</p>
+<ul>It comprises the following elements: 
+<li>>Wrapper_agent (Active) – Generates and drives stimulus to the DUT.</li
+<li>Wrapper_driver – Converts high-level sequence items into signal-level transactions via the 
+Wrapper_interface.</li>
+<li>Wrapper_monitor – Observes DUT responses, reconstructs transactions, and forwards them to 
+analysis components.</li>
+<li>Wrapper_scoreboard – Compares DUT outputs with the Golden_wrapper reference model.</li>
+<li>Wrapper_coverage – Collects functional coverage to evaluate verification progress.</li> </ul>
+<p>The Wrapper_agent operates in active mode, meaning it both drives stimulus (through the driver) and 
+monitors responses.</p>
+<p>The Wrapper_sequencer coordinates between the test sequences and the driver, ensuring proper flow of 
+transaction data.</p>
 
 <h2>SPI and RAM Environments (Passive Agents)</h2>
 The spi_env and RAM_env are configured as passive environments, meaning they do not generate 
