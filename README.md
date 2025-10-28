@@ -1,4 +1,4 @@
-# SPI-Slave-with-Single-Port-RAM_Verification_using-UVM-
+# SPI Slave with Single Port RAM Verification using UVM
 
 <img width="1152" height="896" alt="UVM Structure" src="https://github.com/user-attachments/assets/2576bd8d-ea7a-40e9-abee-1f9f82a2aba4" />
 
